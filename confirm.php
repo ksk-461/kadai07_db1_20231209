@@ -33,25 +33,25 @@
 <body>
     <div id="wrap">
         <form action="./index.php">
-        <div class="list-004">
-            <div>お見積もりご依頼内容</div>
-            <ul>
-                <li>会社名：<?= $company ?></li>
-                <li>お名前：<?= $name ?></li>
-                <li>メール：<?= $email ?></li>
-                <li>折込日：<?= $date ?></li>
-                <li>サイズ：<?= $size ?></li>
-                <li>全道域：<?= $all ?></li>
-                <li>Ａ地区：<?= $sum_a ?></li>
-                <li>Ｂ地区：<?= $sum_b ?></li>
-                <li>Ｃ地区：<?= $sum_c ?></li>
-                <li>Ｄ地区：<?= $sum_d ?></li>
-                <li>Ｅ地区：<?= $sum_e ?></li>
+            <div class="list-004">
+                <div>お見積もりご依頼内容</div>
+                <ul>
+                    <li>会社名：<?= $company ?></li>
+                    <li>お名前：<?= $name ?></li>
+                    <li>メール：<?= $email ?></li>
+                    <li>折込日：<?= $date ?></li>
+                    <li>サイズ：<?= $size ?></li>
+                    <li>全道域：<?= $all ?></li>
+                    <li>Ａ地区：<?= $sum_a ?></li>
+                    <li>Ｂ地区：<?= $sum_b ?></li>
+                    <li>Ｃ地区：<?= $sum_c ?></li>
+                    <li>Ｄ地区：<?= $sum_d ?></li>
+                    <li>Ｅ地区：<?= $sum_e ?></li>
 
-                <p>こちらの内容でお間違えないでしょうか？</p>
-            </ul>
-        </div>
-        <div class="goback">
+                    <p>こちらの内容でお間違えないでしょうか？</p>
+                </ul>
+            </div>
+            <div class="goback">
             <button class="back" onclick="location.href='./index.php'">戻る</button>
         </form>
             <form method="post" action="./submit.php" >

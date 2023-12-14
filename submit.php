@@ -20,6 +20,9 @@
     $sum_c = $center_c + $south_c;
     $sum_d = $north_d;
     $sum_e = $south_e + $north_e + $east_e;
+
+    $assign = "";
+    $status = "";
         
     try {
         $pdo = new PDO('mysql:dbname=dsc_db; charset=utf8; host=localhost','root','');
@@ -28,8 +31,8 @@
     }
 
     $stmt = $pdo->prepare(
-        "INSERT INTO dsc_request(id, company ,name, email, date, size, sum_a, sum_b, sum_c, sum_d, sum_e, request_date)
-        VALUES (NULL, :company :name, :email, :date, :size, :sum_a, :sum_b, :sum_c, :sum_d, :sum_e, sysdate()); ");
+        "INSERT INTO dsc_request(id, company ,name, email, date, size, sum_a, sum_b, sum_c, sum_d, sum_e, assign, status, request_date)
+        VALUES (NULL, :company, :name, :email, :date, :size, :sum_a, :sum_b, :sum_c, :sum_d, :sum_e, :assign, :status, sysdate()); ");
 
 
     $stmt->bindValue(':company', $company, PDO::PARAM_STR);
@@ -42,9 +45,11 @@
     $stmt->bindValue('sum_c', $sum_c, PDO::PARAM_INT);
     $stmt->bindValue(':sum_d', $sum_d, PDO::PARAM_INT);
     $stmt->bindValue(':sum_e', $sum_e, PDO::PARAM_INT);
+    $stmt->bindValue(':assign', $assign, PDO::PARAM_STR);
+    $stmt->bindValue(':status', $status, PDO::PARAM_STR);
 
     $status = $stmt->execute();
-
+   
     if($status === false){
     $error = $stmt->errorInfo();
     exit('ErrorMessage:'.$error[2]);
@@ -58,20 +63,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="submit.css">
+    <link rel="stylesheet" href="css/submit.css">
     <title>登録完了</title>
 </head>
 <body>
     <div class="balloon-013">
         <div class="balloon-013__img-wrap">
-            <img class="balloon-013__img" src="./img/020020.png" alt="" width="250" height="250"
-                loading="lazy" decoding="async"/>
-            <img class="balloon-013__img" src="./img/020002.png" alt="" width="250" height="250"
+            <img class="balloon-013__img" src="./img/17959_color.svg" alt="" width="320" height="180"
                 loading="lazy" decoding="async"/>
         </div>
-        <p class="balloon-013__text">ご依頼いただきありがとうございます。</p>
-        <p class="balloon-013__text">平日9:30〜17:30が営業時間となります。</p>
-
+        <p class="balloon-013__text">
+            ご依頼いただきありがとうございます。<br>
+            平日9:30〜17:30が営業時間となります。
+        </p>
     </div>
 </body>
 </html>
