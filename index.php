@@ -15,7 +15,7 @@
         <form method="post" action="./confirm.php">
 
             <div class="user_info">
-                <h1 class="heading_label">お見積もりご依頼フォーム</h1>
+                <h1 class="heading_label">お見積もり依頼フォーム</h1>
                 <label>
                     <span class="text_label">会社名</span>
                     <input type="text" class="text_box" name="company" placeholder="会社名を入力してください。個人の方は「なし」と入力願います。"/>
