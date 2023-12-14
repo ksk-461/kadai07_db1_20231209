@@ -8,14 +8,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/index.css">
-    <title>お見積もり依頼</title>
+    <title>見積もり依頼</title>
 </head>
 <body>
    <div id="wrap">
         <form method="post" action="./confirm.php">
 
             <div class="user_info">
-                <h1 class="heading_label">お見積もり依頼フォーム</h1>
+                <h1 class="heading_label">見積もり依頼フォーム</h1>
                 <label>
                     <span class="text_label">会社名</span>
                     <input type="text" class="text_box" name="company" placeholder="会社名を入力してください。個人の方は「なし」と入力願います。"/>
