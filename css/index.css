@@ -151,7 +151,7 @@
     display: block;
 }
 
-.submit {
+.confirm {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -166,11 +166,11 @@
     font-size: 1em;
 }
 
-.submit:hover {
-    animation: anima-button-030 1s;
+.confirm:hover {
+    animation: anima-confirm 1s;
 }
 
-@keyframes anima-button-030 {
+@keyframes anima-confirm {
     0% {
         box-shadow: 0 0 0 0 rgb(37 137 208 / 50%);
     }

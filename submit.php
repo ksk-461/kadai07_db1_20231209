@@ -1,4 +1,5 @@
 <?php
+    $company = $_POST['company'];
     $name = $_POST['name'];
     $email = $_POST['email'];
     $date = $_POST['date'];
@@ -27,10 +28,11 @@
     }
 
     $stmt = $pdo->prepare(
-        "INSERT INTO dsc_request(id, name, email, date, size, sum_a, sum_b, sum_c, sum_d, sum_e, request_date)
-        VALUES (NULL, :name, :email, :date, :size, :sum_a, :sum_b, :sum_c, :sum_d, :sum_e, sysdate()); ");
+        "INSERT INTO dsc_request(id, company ,name, email, date, size, sum_a, sum_b, sum_c, sum_d, sum_e, request_date)
+        VALUES (NULL, :company :name, :email, :date, :size, :sum_a, :sum_b, :sum_c, :sum_d, :sum_e, sysdate()); ");
 
 
+    $stmt->bindValue(':company', $company, PDO::PARAM_STR);
     $stmt->bindValue(':name', $name, PDO::PARAM_STR);
     $stmt->bindValue(':email', $email, PDO::PARAM_STR);
     $stmt->bindValue(':date', $date, PDO::PARAM_STR);
@@ -56,9 +58,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="submit.css">
+    <title>登録完了</title>
 </head>
 <body>
-    登録完了
+    <div class="balloon-013">
+        <div class="balloon-013__img-wrap">
+            <img class="balloon-013__img" src="./img/020020.png" alt="" width="250" height="250"
+                loading="lazy" decoding="async"/>
+            <img class="balloon-013__img" src="./img/020002.png" alt="" width="250" height="250"
+                loading="lazy" decoding="async"/>
+        </div>
+        <p class="balloon-013__text">ご依頼いただきありがとうございます。</p>
+        <p class="balloon-013__text">平日9:30〜17:30が営業時間となります。</p>
+
+    </div>
 </body>
 </html>

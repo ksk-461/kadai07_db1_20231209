@@ -7,15 +7,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/index.css">
     <title>お見積もり依頼</title>
 </head>
 <body>
    <div id="wrap">
-        <form method="post" action="./submit.php">
+        <form method="post" action="./confirm.php">
 
             <div class="user_info">
                 <h1 class="heading_label">お見積もりご依頼フォーム</h1>
+                <label>
+                    <span class="text_label">会社名</span>
+                    <input type="text" class="text_box" name="company" placeholder="会社名を入力してください。個人の方は「なし」と入力願います。"/>
+                </label>
                 <label>
                     <span class="text_label">お名前</span>
                     <input type="text" class="text_box" name="name" placeholder="名前を入力してください"/>
@@ -128,6 +132,8 @@
                 
             </div>
 
+            <input type="submit" class="confirm" value="確認">
+
             <!-- 確認モーダルを表示して、一度試算したかったが時間間に合わず次回に持ち越し -->
             <!-- このまま使用するとSQLに二重に登録されてしまう。 -->
             <!-- <div class="modal-002__wrap">
@@ -144,9 +150,9 @@
                             <p>D地区合計：<span class="sum_d"></span>枚</p>
                             <p>E地区合計：<span class="sum_e"></span>枚</p>
                             <p>全地区合計：<span class="sum_all"></span>枚</p>
-                            <p></p> -->
-                            <input type="submit" class="submit" value="送信">
-                        <!-- </div>
+                            <p></p> 
+                            ☆ここにinput挿入☆
+                        </div>
                     </div>
                     <label for="modal-002__close">
                         <div class="modal-002__background"></div>
@@ -158,6 +164,6 @@
 
    </div>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-   <script src="./js/input.js"></script>
+   <script src="./js/index.js"></script>
 </body>
 </html>

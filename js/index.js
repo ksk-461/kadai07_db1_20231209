@@ -11,30 +11,31 @@ getDel_day();
 
 $('.district_tab').on('change',($this)=>{
     const district = $this.currentTarget['id'];
+    const time = 200;
     switch(district){
         case 'tab_all':
             $('.map').children('img').css('display','none');
-            $('.h_all').css('display','block').fadeOut(150).fadeIn(150);
+            $('.h_all').css('display','block').fadeOut(time).fadeIn(time);
             break;
         case 'tab_center':
             $('.map').children('img').css('display','none');
             $('.h_all').css('display','block');
-            $('.h_center').css('display','block').fadeOut(150).fadeIn(150);
+            $('.h_center').css('display','block').fadeOut(time).fadeIn(time);
             break;
         case 'tab_south':
             $('.map').children('img').css('display','none');
             $('.h_all').css('display','block');
-            $('.h_south').css('display','block').fadeOut(150).fadeIn(150);
+            $('.h_south').css('display','block').fadeOut(time).fadeIn(time);
             break;
         case 'tab_north':
             $('.map').children('img').css('display','none');
             $('.h_all').css('display','block');
-            $('.h_north').css('display','block').fadeOut(150).fadeIn(150);
+            $('.h_north').css('display','block').fadeOut(time).fadeIn(time);
             break;
         case 'tab_east':
             $('.map').children('img').css('display','none');
             $('.h_all').css('display','block');
-            $('.h_east').css('display','block').fadeOut(150).fadeIn(150);
+            $('.h_east').css('display','block').fadeOut(time).fadeIn(time);
             break;
         default:
             console.log('ERROR');
